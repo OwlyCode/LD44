@@ -340,6 +340,10 @@ MonoBehaviour:
     distance: 20000
   - content: 'Captain: If we succeed, we will be saviors.'
     distance: 20000
+  - content: 'AG-0409: Detecting massive signature.'
+    distance: 140000
+  - content: 'Yuri: We''re close to the first station.'
+    distance: 140000
 --- !u!114 &557889401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,7 +512,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4686878378583236, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -7000
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4686878378583236, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -534,6 +538,10 @@ Prefab:
         type: 2}
       propertyPath: far clip plane
       value: 20000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887148312569934, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}
@@ -649,7 +657,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 120000
+      value: 180000
       objectReference: {fileID: 0}
     - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
       propertyPath: m_LocalRotation.x
