@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour {
 
-    private float speed = 1f;
-    private float translationSpeed = 1f;
+    private float speed = 7f;
+    private float translationSpeed = 5f;
 
     // Use this for initialization
     void Start () {

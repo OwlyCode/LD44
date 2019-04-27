@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 97884191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 161.8}
+  m_LocalPosition: {x: 0, y: 0, z: 5000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -170,8 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPrefabs:
   - {fileID: 1368524680543284, guid: a5965b68e07cf5b43a75a28c6f186aac, type: 2}
-  radius: 10
-  sampleRegionSize: {x: 100, y: 100, z: 245.08}
+  radius: 300
+  sampleRegionSize: {x: 5000, y: 5000, z: 10000}
   rejectionSamples: 5
   displayRadius: 0.49
 --- !u!1 &170076733
@@ -462,7 +462,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4282568573920064, guid: dcb512d5a26c5844db42b6434735e73d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1263
       objectReference: {fileID: 0}
     - target: {fileID: 4282568573920064, guid: dcb512d5a26c5844db42b6434735e73d, type: 2}
       propertyPath: m_LocalRotation.x
