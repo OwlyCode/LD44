@@ -13,7 +13,7 @@ public class Tutorial : MonoBehaviour {
         ship = level.ship.GetComponent<ShipMovement>();
 
         level.agitation = 2f;
-        level.spacing = 800f;
+        level.spacing = 1600f;
         level.scale = 100f;
         ship.speed = 10f;
 
@@ -24,5 +24,30 @@ public class Tutorial : MonoBehaviour {
 	void Update () {
         ship.speed = Mathf.Clamp(10f + Mathf.Round(level.GetDistance() / 1000f), 10f, 45f);
         level.agitation = level.GetDistance() / 15000f;
-	}
+
+        if (level.chunkCrossed > 1)
+        {
+            level.spacing = 1550f;
+        }
+
+        if (level.chunkCrossed > 2)
+        {
+            level.spacing = 1500f;
+        }
+
+        if (level.chunkCrossed > 2)
+        {
+            level.spacing = 1400f;
+        }
+
+        if (level.chunkCrossed > 4)
+        {
+            level.spacing = 1300f;
+        }
+
+        if (level.chunkCrossed > 6)
+        {
+            level.spacing = 2000f;
+        }
+    }
 }

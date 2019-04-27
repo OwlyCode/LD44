@@ -16,6 +16,8 @@ public class LevelController : MonoBehaviour {
 
     float startingPosition;
 
+    public int chunkCrossed = 0;
+
     public float GetDistance()
     {
         return enabled ? ship.transform.position.z - startingPosition : 0f;
@@ -37,6 +39,7 @@ public class LevelController : MonoBehaviour {
     void Update () {
 		if (currentSpawner.transform.position.z < ship.transform.position.z)
         {
+            chunkCrossed++;
             Destroy(oldSpawner);
             oldSpawner = currentSpawner;
             currentSpawner = Instantiate(asteroidSpawner, oldSpawner.transform.position + new Vector3(0,0, oldSpawner.GetComponent<AsteroidSpawnerV2>().sampleRegionSize.z), Quaternion.identity);
