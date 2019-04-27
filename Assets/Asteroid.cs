@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour {
 
-    float agitation = 1000f;
+    float agitation = 5f;
     float rotation = 10f;
 
     // Use this for initialization

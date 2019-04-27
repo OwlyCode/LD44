@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class AsteroidSpawnerV2 : MonoBehaviour {
 
-    public float radius = 2;
+    public GameObject[] asteroidPrefabs;
+
+    public float radius = 8;
     public Vector3 sampleRegionSize = Vector3.one;
     public int rejectionSamples = 30;
     public float displayRadius = 0.1f;
@@ -13,7 +15,12 @@ public class AsteroidSpawnerV2 : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-       points = PoissonSphere.GeneratePoints(radius, sampleRegionSize, rejectionSamples);
+        points = PoissonSphere.GeneratePoints(radius, sampleRegionSize, rejectionSamples);
+
+        foreach(Vector3 point in points)
+        {
+            Instantiate(asteroidPrefabs[0], transform.position - sampleRegionSize/2 + point, Quaternion.identity);
+        }    
 	}
 	
 	// Update is called once per frame
@@ -21,21 +28,8 @@ public class AsteroidSpawnerV2 : MonoBehaviour {
 		
 	}
 
-    private void OnValidate()
-    {
-        points = PoissonSphere.GeneratePoints(radius, sampleRegionSize, rejectionSamples);
-    }
-
     private void OnDrawGizmos()
     {
-        return;
-        Gizmos.DrawWireCube(sampleRegionSize/2, sampleRegionSize);
-        if (points != null)
-        {
-            foreach (Vector3 point in points)
-            {
-                Gizmos.DrawSphere(point, displayRadius);
-            }
-        }
+        Gizmos.DrawWireCube(transform.position, sampleRegionSize);
     }
 }
