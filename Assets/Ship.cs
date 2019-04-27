@@ -2,38 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ship : MonoBehaviour {
-
-    private float speed = 20f;
-    private float translationSpeed = 8f;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
+public class Ship : MonoBehaviour {	
 	// Update is called once per frame
 	void Update () {
-        transform.position = transform.position + Vector3.forward * speed;
+
+        float verticalAngle = transform.eulerAngles.x;
+        float horizontalAngle = transform.eulerAngles.y;
+        bool rollbackVertical = true;
+        bool rollbackHorizontal= true;
+
 
         if (Input.GetKey("up"))
         {
-            transform.position = transform.position + Vector3.up * translationSpeed;
+            verticalAngle = Mathf.MoveTowardsAngle(verticalAngle, -10f, Time.deltaTime * 50f);
+            rollbackVertical = false;
         }
 
         if (Input.GetKey("down"))
         {
-            transform.position = transform.position + Vector3.down * translationSpeed;
+            verticalAngle = Mathf.MoveTowardsAngle(verticalAngle, 10f, Time.deltaTime * 50f);
+            rollbackVertical = false;
         }
-   
+ 
+
         if (Input.GetKey("left"))
         {
-            transform.position = transform.position + Vector3.left * translationSpeed;
+            horizontalAngle = Mathf.MoveTowardsAngle(horizontalAngle, -10f, Time.deltaTime * 50f);
+            rollbackHorizontal = false;
         }
 
         if (Input.GetKey("right"))
         {
-            transform.position = transform.position + Vector3.right * translationSpeed;
+            horizontalAngle = Mathf.MoveTowardsAngle(horizontalAngle, 10f, Time.deltaTime * 50f);
+            rollbackHorizontal = false;
         }
+
+        if (rollbackVertical)
+        {
+            verticalAngle = Mathf.MoveTowardsAngle(verticalAngle, 0, Time.deltaTime * 50f);
+        }
+
+        if (rollbackHorizontal)
+        {
+            horizontalAngle = Mathf.MoveTowardsAngle(horizontalAngle, 0, Time.deltaTime * 50f);
+        }
+
+        transform.eulerAngles = new Vector3(verticalAngle, horizontalAngle, 0);
     }
 }
