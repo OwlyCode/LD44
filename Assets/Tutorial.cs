@@ -6,9 +6,13 @@ public class Tutorial : MonoBehaviour {
 
     LevelController level;
     ShipMovement ship;
+    public Dialog[] dialogs;
+    Queue<Dialog> dialogsQueue;
+    Dialog stagedDialog = null;
 
 	// Use this for initialization
 	void Start () {
+        dialogsQueue = new Queue<Dialog>(dialogs);
         level = GetComponent<LevelController>();
         ship = level.ship.GetComponent<ShipMovement>();
 
@@ -24,6 +28,17 @@ public class Tutorial : MonoBehaviour {
 	void Update () {
         ship.speed = Mathf.Clamp(10f + Mathf.Round(level.GetDistance() / 1000f), 10f, 45f);
         level.agitation = level.GetDistance() / 15000f;
+
+        if (dialogsQueue.Count > 0 && stagedDialog == null)
+        {
+            stagedDialog = dialogsQueue.Dequeue();
+        }
+
+        if (stagedDialog != null && stagedDialog.distance < level.GetDistance())
+        {
+            GetComponent<DialogManager>().Enqueue(stagedDialog.content);
+            stagedDialog = null;
+        }
 
         if (level.chunkCrossed > 1)
         {
