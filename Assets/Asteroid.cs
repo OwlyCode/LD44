@@ -15,8 +15,14 @@ public class Asteroid : MonoBehaviour {
         rb.AddForce(new Vector3(Random.Range(-agitation, agitation), Random.Range(-agitation, agitation), Random.Range(-agitation, 0)), ForceMode.Impulse);
     }
 
-	// Update is called once per frame
-	void Update () {
+
+    private void Start()
+    {
+        transform.localEulerAngles = new Vector3(Random.Range(0, 365), Random.Range(0, 365), Random.Range(0, 365));
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

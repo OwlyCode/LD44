@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ShipMovement : MonoBehaviour {
 
-    private float speed = 60f;
+    public float speed = 60f;
 
-    private float translationSpeed = 8f;
+    public float translationSpeed = 8f;
 
     void Update()
     {
