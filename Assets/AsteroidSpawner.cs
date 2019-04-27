@@ -8,11 +8,11 @@ public class AsteroidSpawner : MonoBehaviour {
 
     public GameObject ship;
 
-    private float wideness = 1000f;
+    private float wideness = 2500f;
     private float initialDepth = 2500f;
 
-    private int maxSmallInstances = 3000;
-    private int maxBigInstances = 40;
+    private int maxSmallInstances = 300;
+    private int maxBigInstances = 100;
 
     private List<GameObject> smallInstances;
     private List<GameObject> bigInstances;
@@ -58,7 +58,7 @@ public class AsteroidSpawner : MonoBehaviour {
 
             GameObject instance = Instantiate(asteroid, position, quaternion);
 
-            float scale = Random.Range(20, 50);
+            float scale = Random.Range(80, 120);
             instance.transform.localScale = new Vector3(scale, scale, scale);
             instance.GetComponent<Rigidbody>().mass = scale;
 

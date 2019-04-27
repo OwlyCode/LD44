@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    float agitation = 1000f;
+    float rotation = 10f;
+
+    // Use this for initialization
+    void Start () {
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddTorque(new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)) * 8f);
-        rb.AddForce(new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)), ForceMode.Impulse);
+        rb.AddTorque(new Vector3(Random.Range(-rotation, rotation), Random.Range(-rotation, rotation), Random.Range(-rotation, rotation)) * rotation);
+        rb.AddForce(new Vector3(Random.Range(-agitation, agitation), Random.Range(-agitation, agitation), Random.Range(-agitation, 0)), ForceMode.Impulse);
     }
 	
 	// Update is called once per frame
