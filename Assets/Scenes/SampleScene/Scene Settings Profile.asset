@@ -146,7 +146,7 @@ MonoBehaviour:
     m_Value: 0
   fogType:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
 --- !u!114 &114377043923625064
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2150ee00179b2f4418ea8b21a7e98eea, type: 3}
   m_Name: ExponentialFog
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   colorMode:
     m_OverrideState: 1
     m_Value: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb673446a9a2dfa408924fe9a56322e0, type: 3}
   m_Name: LinearFog
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   colorMode:
     m_OverrideState: 1
     m_Value: 0
@@ -239,11 +239,11 @@ MonoBehaviour:
     min: 0
   fogStart:
     m_OverrideState: 1
-    m_Value: 2000
+    m_Value: 8000
     min: 0
   fogEnd:
     m_OverrideState: 1
-    m_Value: 3000
+    m_Value: 10000
     min: 0
   fogHeightStart:
     m_OverrideState: 1

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13259855, g: 0.058621302, b: 0.01333159, a: 1}
+  m_IndirectSpecularColor: {r: 0.13259855, g: 0.0586213, b: 0.01333159, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -469,7 +469,7 @@ Prefab:
     - target: {fileID: 20174808651534408, guid: dcb512d5a26c5844db42b6434735e73d,
         type: 2}
       propertyPath: far clip plane
-      value: 5000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 20174808651534408, guid: dcb512d5a26c5844db42b6434735e73d,
         type: 2}

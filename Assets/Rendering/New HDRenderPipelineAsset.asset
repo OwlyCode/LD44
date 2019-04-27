@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf1dab834d4ec34195b920ea7bbf9ec, type: 3}
-  m_Name: HDRP
+  m_Name: New HDRenderPipelineAsset
   m_EditorClassIdentifier: 
   version: 1
-  m_RenderPipelineResources: {fileID: 11400000, guid: 00000000000000000000000000000000,
-    type: 0}
+  m_RenderPipelineResources: {fileID: 11400000, guid: 3ce144cff5783da45aa5d4fdc2da14b7,
+    type: 2}
   m_FrameSettings:
     enableShadow: 1
     enableContactShadows: 1
