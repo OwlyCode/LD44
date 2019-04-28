@@ -25,6 +25,14 @@ public class Merchant : MonoBehaviour {
     // Use this for initialization
     void Start () {
         queue = new Queue<string>(messages);
+
+        if (GlobalState.respawning)
+        {
+            GlobalState.respawning = false;
+            queue = new Queue<string>();
+            queue.Enqueue("AG-0409: Ship is ready for flight.");
+        }
+
         ShowMessage();
     }
 	

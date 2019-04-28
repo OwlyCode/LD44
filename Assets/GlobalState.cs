@@ -9,4 +9,5 @@ public static class GlobalState
     public static bool hasEmergencyShieldUpgrade = false;
     public static bool hasDeflector = false;
     public static int emergencyShieldLife = 0;
+    public static bool respawning = false;
 }

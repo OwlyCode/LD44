@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour {
     // Update is called once per frame
-    
+
+    public GameObject brokenVersion;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (GlobalState.hasEmergencyShieldUpgrade && (GlobalState.emergencyShieldLife > 0))
@@ -15,11 +17,11 @@ public class Ship : MonoBehaviour {
             return;
         }
 
+        GameObject destroyed = Instantiate(brokenVersion, transform.position, transform.rotation);
+        destroyed.transform.parent = transform.parent;
         Destroy(gameObject);
 
         GameObject.Find("LevelController").GetComponent<LevelController>().alive = false;
-
-        collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(10f, transform.position, 1000f);
     }
 
     void Update () {

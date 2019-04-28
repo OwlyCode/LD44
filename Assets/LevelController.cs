@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour {
 
@@ -35,6 +36,13 @@ public class LevelController : MonoBehaviour {
     public float GetDistance()
     {
         return enabled ? ship.transform.position.z - startingPosition : 0f;
+    }
+
+    IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(5f);
+
+        SceneManager.LoadScene(respawnLevel);
     }
 
     void SpawnChunk(int offset)
@@ -144,7 +152,9 @@ public class LevelController : MonoBehaviour {
         if (!alive)
         {
             GetComponent<DialogManager>().EndAllDialogs();
-            speed = -5f;
+            speed = 0f;
+            GlobalState.respawning = true;
+            StartCoroutine(Respawn());
         }
 
         if (oldSpawner != null)
