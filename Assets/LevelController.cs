@@ -26,6 +26,8 @@ public class LevelController : MonoBehaviour {
 
     public float speed = 0f;
 
+    public bool alive = true;
+
     public float GetDistance()
     {
         return enabled ? ship.transform.position.z - startingPosition : 0f;
@@ -92,7 +94,7 @@ public class LevelController : MonoBehaviour {
         float chunkZ = currentSpawner.transform.position.z - chunkSize / 2;
         float chunkProgression = 1f - (chunkZ - ship.transform.position.z) / chunkSize;
 
-        if (dialogsQueue.Count > 0 && stagedDialog == null)
+        if (alive && (dialogsQueue.Count > 0 && stagedDialog == null))
         {
             stagedDialog = dialogsQueue.Dequeue();
         }
@@ -112,6 +114,12 @@ public class LevelController : MonoBehaviour {
             }
 
             speed = Mathf.Lerp(oldSpeed, expandedChunkList[chunkCrossed].targetSpeed, chunkProgression);
+        }
+
+        if (!alive)
+        {
+            GetComponent<DialogManager>().EndAllDialogs();
+            speed = -0.2f;
         }
 
 

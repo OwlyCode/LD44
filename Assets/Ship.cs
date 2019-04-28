@@ -2,9 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ship : MonoBehaviour {	
-	// Update is called once per frame
-	void Update () {
+public class Ship : MonoBehaviour {
+    // Update is called once per frame
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
+
+        GameObject.Find("LevelController").GetComponent<LevelController>().alive = false;
+
+        collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(10f, transform.position, 1000f);
+    }
+
+    void Update () {
 
         float verticalAngle = transform.eulerAngles.x;
         float horizontalAngle = transform.eulerAngles.y;

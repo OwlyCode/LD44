@@ -272,6 +272,7 @@ MonoBehaviour:
   - content: 'AG-0409: Jump drive activated.'
     chunk: 53
   speed: 0
+  alive: 1
 --- !u!4 &511810636
 Transform:
   m_ObjectHideFlags: 0

@@ -44,7 +44,12 @@ public class DialogManager : MonoBehaviour {
         }
     }
 
-	void Update () {
+    public void EndAllDialogs()
+    {
+        currentLife = -1;
+    }
+
+    void Update () {
         currentLife -= Time.deltaTime;
 
         if (currentLife < 0)
