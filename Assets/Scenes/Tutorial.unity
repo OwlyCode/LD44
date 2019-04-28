@@ -272,7 +272,6 @@ GameObject:
   m_Component:
   - component: {fileID: 557889399}
   - component: {fileID: 557889398}
-  - component: {fileID: 557889400}
   - component: {fileID: 557889401}
   m_Layer: 0
   m_Name: LevelController
@@ -295,27 +294,29 @@ MonoBehaviour:
   asteroidSpawner: {fileID: 1064570622893080, guid: 446bd56841689de4bb359f8ffc5aa2dd,
     type: 2}
   ship: {fileID: 1250301420}
+  stationPrefab: {fileID: 1440410268447082, guid: 570a1971785964f43908a9672f1e7ad6,
+    type: 2}
   chunkSettings:
   - targetSpeed: 10
     spacing: 1600
     scale: 100
     agitation: 0
-    repeat: 3
+    repeat: 2
   - targetSpeed: 20
     spacing: 1550
     scale: 100
     agitation: 0
-    repeat: 4
+    repeat: 3
   - targetSpeed: 30
     spacing: 1500
     scale: 100
     agitation: 0
-    repeat: 5
+    repeat: 3
   - targetSpeed: 40
     spacing: 1400
     scale: 100
     agitation: 0
-    repeat: 5
+    repeat: 3
   - targetSpeed: 50
     spacing: 1300
     scale: 100
@@ -325,8 +326,8 @@ MonoBehaviour:
     spacing: 2000
     scale: 100
     agitation: 0
-    repeat: 3
-  - targetSpeed: 0
+    repeat: 1
+  - targetSpeed: 1
     spacing: 200000
     scale: 100
     agitation: 0
@@ -366,38 +367,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &557889400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 557889397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c91e623e627a4384889c091343d94252, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogs:
-  - content: 'AG-0409: Hyperjump complete. Approaching the asteroid field.'
-    chunk: 0
-  - content: 'Yuri: Alright, let''s manuever to the next station. You''re in manual
-      mode Cap''!'
-    chunk: 0
-  - content: 'Tutorial: Use WASD or arrow keys to move the ship.'
-    chunk: 0
-  - content: 'Yuri: Are you sure about what we''re doing?'
-    chunk: 0
-  - content: 'Captain: The second we stole this ship we became deserters. It is too
-      late to reconsider our plans.'
-    chunk: 0
-  - content: 'Yuri: So this it? We''re outlaws now?'
-    chunk: 0
-  - content: 'Captain: If we succeed, we will be saviors.'
-    chunk: 0
-  - content: 'AG-0409: Detecting massive signature.'
-    chunk: 0
-  - content: 'Yuri: We''re close to the first station.'
-    chunk: 0
 --- !u!114 &557889401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,7 +516,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1094103652
 Prefab:
@@ -586,7 +555,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4686878378583236, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 20215403571168308, guid: b3d7a2d20393e9a439e2eacd2dc97c1b,
         type: 2}
@@ -694,72 +663,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &1768990194
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 180000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204463409574686, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 4869156671919224, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4869156671919224, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4869156671919224, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 570a1971785964f43908a9672f1e7ad6, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1807394418
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +750,7 @@ RectTransform:
   m_Children:
   - {fileID: 1461310997}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -911,5 +814,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -6,6 +6,7 @@ public class LevelController : MonoBehaviour {
 
     public GameObject asteroidSpawner;
     public GameObject ship;
+    public GameObject stationPrefab;
 
     GameObject oldSpawner;
     GameObject currentSpawner;
@@ -58,7 +59,14 @@ public class LevelController : MonoBehaviour {
         currentSpawner.GetComponent<AsteroidSpawnerV2>().SpawnAsteroids(spacing, scale, agitation);
     }
 
-    // Use this for initialization
+    void SpawnStation(float z)
+    {
+        Vector3 position = new Vector3(0, 0, z) + new Vector3(ship.transform.position.x, ship.transform.position.y, asteroidSpawner.GetComponent<AsteroidSpawnerV2>().sampleRegionSize.z);
+        GameObject station = Instantiate(stationPrefab, position, Quaternion.identity);
+
+        station.transform.parent = currentSpawner.transform;
+    }
+
     void Start ()
     {
         dialogsQueue = new Queue<Dialog>(dialogs);
@@ -76,15 +84,11 @@ public class LevelController : MonoBehaviour {
         SpawnChunk(0);
     }
 
-    // Update is called once per frame
     void Update () {
 
         float chunkSize = asteroidSpawner.GetComponent<AsteroidSpawnerV2>().sampleRegionSize.z;
         float chunkZ = currentSpawner.transform.position.z - chunkSize / 2;
         float chunkProgression = 1f - (chunkZ - ship.transform.position.z) / chunkSize;
-
-
-        Debug.Log(chunkProgression);
 
         if (dialogsQueue.Count > 0 && stagedDialog == null)
         {
@@ -106,7 +110,6 @@ public class LevelController : MonoBehaviour {
             }
 
             speed = Mathf.Lerp(oldSpeed, expandedChunkList[chunkCrossed].targetSpeed, chunkProgression);
-            //speed = expandedChunkList[chunkCrossed].targetSpeed;
         }
 
 
@@ -121,6 +124,10 @@ public class LevelController : MonoBehaviour {
         {
             chunkCrossed++;
             SpawnChunk(chunkCrossed);
+            if (chunkCrossed == expandedChunkList.Count - 1)
+            {
+                SpawnStation(currentSpawner.transform.position.z - asteroidSpawner.GetComponent<AsteroidSpawnerV2>().sampleRegionSize.z);
+            }
         }
 	}
 }
