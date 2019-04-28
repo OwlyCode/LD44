@@ -85,6 +85,16 @@ public class LevelController : MonoBehaviour {
 
     void Start ()
     {
+        if (GlobalState.hasEmergencyShieldUpgrade)
+        {
+            GlobalState.emergencyShieldLife = 1;
+        }
+        if (GlobalState.hasDeflector)
+        {
+            GlobalState.emergencyShieldLife = 3;
+        }
+
+
         dialogsQueue = new Queue<Dialog>(dialogs);
         expandedChunkList = new List<ChunkSettings>();
 

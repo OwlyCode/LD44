@@ -1188,9 +1188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Buy the declector upgrade
-
-'
+  m_Text: Buy the emergency shield upgrade Mk2
 --- !u!222 &1496941434
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1415,7 +1413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy the emergency shield upgrade
+  m_Text: Buy the emergency shield upgrade Mk1
 --- !u!222 &1570886775
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2286,9 +2284,8 @@ MonoBehaviour:
     It would be wise to upgrade your ship accordingly.'
   - 'Yuri: I see where you are taking us.'
   - 'Captain: What is it this time?'
-  - 'Stoks: I can install a front deflector. You have to trigger it manually and it
-    will bounce asteroids for a short period of time. It has a cooldown before it
-    can be reused.'
+  - 'Stoks: I can install a boost for your emergency shield. You will be able to survive
+    up to 3 impacts.'
   - 'Stoks: This piece of technology is REALLY expensive. I had to sell an entire
     lot of good cargo ships to afford it.'
   - 'Stoks: So please understand that I will ask you the memory of the person you

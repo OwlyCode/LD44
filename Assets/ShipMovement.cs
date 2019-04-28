@@ -5,6 +5,19 @@ using UnityEngine;
 public class ShipMovement : MonoBehaviour {
     float translationSpeed = 20f;
 
+    void Start()
+    {
+        if (GlobalState.hasMk1Upgrade)
+        {
+            translationSpeed = 25f;
+        }
+
+        if (GlobalState.hasMk2Upgrade)
+        {
+            translationSpeed = 40f;
+        }
+    }
+
     void Update()
     {
         if (Input.GetKey("up"))

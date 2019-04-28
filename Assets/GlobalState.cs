@@ -8,4 +8,5 @@ public static class GlobalState
     public static bool hasMk2Upgrade = false;
     public static bool hasEmergencyShieldUpgrade = false;
     public static bool hasDeflector = false;
+    public static int emergencyShieldLife = 0;
 }

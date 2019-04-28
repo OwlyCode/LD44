@@ -7,9 +7,17 @@ public class Ship : MonoBehaviour {
     
     private void OnCollisionEnter(Collision collision)
     {
-        //Destroy(gameObject);
+        if (GlobalState.hasEmergencyShieldUpgrade && (GlobalState.emergencyShieldLife > 0))
+        {
+            GlobalState.emergencyShieldLife--;
+            collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(1000f, transform.position, 5000f);
 
-        //GameObject.Find("LevelController").GetComponent<LevelController>().alive = false;
+            return;
+        }
+
+        Destroy(gameObject);
+
+        GameObject.Find("LevelController").GetComponent<LevelController>().alive = false;
 
         collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(10f, transform.position, 1000f);
     }

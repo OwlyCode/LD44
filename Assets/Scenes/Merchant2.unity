@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 212915336}
   - component: {fileID: 212915335}
   m_Layer: 5
-  m_Name: Emergency Shield
+  m_Name: Emergency shield upgrade Mk1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,7 +577,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy the emergency shield upgrade
+  m_Text: Buy the emergency shield upgrade Mk1
 --- !u!222 &557995582
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1582,9 +1582,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Buy the declector upgrade
-
-'
+  m_Text: Buy the emergency shield upgrade Mk2
 --- !u!222 &1361815468
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2070,7 +2068,7 @@ GameObject:
   - component: {fileID: 1861139517}
   - component: {fileID: 1861139516}
   m_Layer: 5
-  m_Name: Deflector
+  m_Name: Emergency shield upgrade Mk2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

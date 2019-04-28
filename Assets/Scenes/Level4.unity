@@ -152,15 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 20215403571168308, guid: b3d7a2d20393e9a439e2eacd2dc97c1b,
-        type: 2}
-      propertyPath: far clip plane
-      value: 20000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4887148312569934, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}
   m_IsPrefabAsset: 0

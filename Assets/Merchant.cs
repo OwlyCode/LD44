@@ -92,7 +92,7 @@ public class Merchant : MonoBehaviour {
         engineUpgradeMk1.SetActive(queue.Count == 0 && !GlobalState.hasMk1Upgrade && level > 0);
         engineUpgradeMk2.SetActive(queue.Count == 0 && GlobalState.hasMk1Upgrade && !GlobalState.hasMk2Upgrade && level > 1);
         emergencyShild.SetActive(queue.Count == 0 && !GlobalState.hasEmergencyShieldUpgrade && level > 2);
-        deflector.SetActive(queue.Count == 0 && !GlobalState.hasDeflector && level > 3);
+        deflector.SetActive(queue.Count == 0 && GlobalState.hasEmergencyShieldUpgrade && !GlobalState.hasDeflector && level > 3);
     }
 
     public void ShowMessage()
