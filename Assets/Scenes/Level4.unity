@@ -219,22 +219,27 @@ MonoBehaviour:
   nextLevel: Hyperspace
   respawnLevel: Merchant4
   chunkSettings:
-  - targetSpeed: 40
+  - targetSpeed: 200
+    spacing: 4000
+    scale: 50
+    agitation: 10
+    repeat: 17
+  - targetSpeed: 80
     spacing: 4000
     scale: 500
     agitation: 10
     repeat: 2
-  - targetSpeed: 70
+  - targetSpeed: 100
     spacing: 3800
     scale: 500
     agitation: 10
     repeat: 1
-  - targetSpeed: 100
+  - targetSpeed: 120
     spacing: 3700
     scale: 500
     agitation: 10
     repeat: 1
-  - targetSpeed: 120
+  - targetSpeed: 130
     spacing: 3600
     scale: 500
     agitation: 10
@@ -254,10 +259,10 @@ MonoBehaviour:
     scale: 500
     agitation: 20
     repeat: 10
-  - targetSpeed: 300
-    spacing: 5000
-    scale: 10
-    agitation: 0
+  - targetSpeed: 280
+    spacing: 4500
+    scale: 30
+    agitation: 10
     repeat: 20
   dialogs:
   - content: 'AG-0409: Entering Sector Delta.'
@@ -273,15 +278,15 @@ MonoBehaviour:
       Admiral.'
     chunk: 0
   - content: 'AG-0409: Communications with Solaria''s Comm Relay established. '
-    chunk: 53
+    chunk: 57
   - content: 'Yuri: Sending the baby!'
-    chunk: 53
+    chunk: 57
   - content: 'Yuri: Upload complete!'
-    chunk: 53
+    chunk: 57
   - content: 'Captain: Let''s not get caught. AG, take us to hyperspace!'
-    chunk: 53
+    chunk: 57
   - content: 'AG-0409: Jump drive activated.'
-    chunk: 53
+    chunk: 57
   speed: 0
   alive: 1
 --- !u!4 &511810636

@@ -7,9 +7,9 @@ public class Ship : MonoBehaviour {
     
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
 
-        GameObject.Find("LevelController").GetComponent<LevelController>().alive = false;
+        //GameObject.Find("LevelController").GetComponent<LevelController>().alive = false;
 
         collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(10f, transform.position, 1000f);
     }
