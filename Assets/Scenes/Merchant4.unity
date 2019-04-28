@@ -1945,31 +1945,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages:
-  - 'Stoks: Well, look at that! It''s the famous Captain, hero of the Great Armada!
-    They''re all going crazy about you outside of the belt.'
-  - 'Stoks: I''m Stoks by the way, welcome to my station.'
-  - 'Captain: Where is Fato? Isn''t he running this place anymore ?'
-  - 'Stoks: Well he retired a while ago. But business is business so he installed
-    me. I''m his best hand!'
-  - 'Yuri: I hate those station AIs, being unmaintained for so long they all go nuts
-    or egocentric.'
-  - 'Captain: Listen, we''re on a rush to Solaria, will you help or not?'
-  - 'Stoks: It depends on what you have to offer.'
-  - 'Captain: There is no time for this. Soon the Great Armada will be there and will
-    decimate a peaceful neutral world.'
-  - 'Stoks: Ooooh. Interesting. Let''s say this crucial peace of information earns
-    you the fuel I''ll put in your ship.'
-  - 'Stoks: ...'
-  - 'Stoks: This ship could easily be upgraded! Let me boost its engines so you can
-    safely cross the belt. It will only cost you a memory.'
-  - 'Captain: A memory?'
-  - 'Stoks: Yes! But be aware that selling a memory is a destructive process. It will
-    become mine. It won''t be in your head anymore. You will remember what you told
-    me but won''t be able to "feel" it anymore. No more taste, no more sound, image
-    or emotion.'
-  - 'Stoks: So this upgrade would cost you the memory of your first battle.'
-  - 'Yuri: Captain! Don''t do this!'
-  - 'Captain: Let me think about it...'
+  - 'Yuri: Last stop before we get in Solaria''s Comm Network range.'
+  - 'Stoks: Ahem.'
+  - 'Captain: What?'
+  - 'Stoks: The sector you are entering is the worst thing you''ll experience. EVER.
+    It would be wise to upgrade your ship accordingly.'
+  - 'Yuri: I see where you are taking us.'
+  - 'Captain: What is it this time?'
+  - 'Stoks: I can install a front deflector. You have to trigger it manually and it
+    will bounce asteroids for a short period of time. It has a cooldown before it
+    can be reused.'
+  - 'Stoks: This piece of technology is REALLY expensive. I had to sell an entire
+    lot of good cargo ships to afford it.'
+  - 'Stoks: So please understand that I will ask you the memory of the person you
+    love the most.'
+  - 'Yuri: ...'
+  - 'Captain: Millions of lives are at stake....'
   text: {fileID: 80262511}
   nextButton: {fileID: 1596233623}
   leaveButton: {fileID: 2101707093}
