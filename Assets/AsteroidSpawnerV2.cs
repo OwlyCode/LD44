@@ -8,14 +8,17 @@ public class AsteroidSpawnerV2 : MonoBehaviour {
     public Vector3 sampleRegionSize = Vector3.one;
     public int rejectionSamples = 30;
 
-    List<Vector3> points;
-
     public float speed = 0f;
 
-    public void SpawnAsteroids(float spacing, float scale, float agitation)
+    public IEnumerator SpawnAsteroids(float spacing, float scale, float agitation)
     {
-        points = PoissonSphere.GeneratePoints(spacing, sampleRegionSize, rejectionSamples);
+        List<Vector3> points = PoissonSphere.GeneratePoints(spacing, sampleRegionSize, rejectionSamples);
 
+        yield return SpawnAsteroids(points, scale, agitation);
+    }
+
+    public IEnumerator SpawnAsteroids(List<Vector3> points, float scale, float agitation)
+    {
         foreach (Vector3 point in points)
         {
             GameObject instance = Instantiate(asteroidPrefabs[0], transform.position - sampleRegionSize / 2 + point, Quaternion.identity);
@@ -24,10 +27,17 @@ public class AsteroidSpawnerV2 : MonoBehaviour {
             instance.GetComponent<Asteroid>().Stimulate(agitation);
             instance.transform.parent = transform;
         }
+
+        yield return null;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
+
+    // Update is called once per frame
+    void Update () {
         transform.position = transform.position + Vector3.back * speed;
     }
 

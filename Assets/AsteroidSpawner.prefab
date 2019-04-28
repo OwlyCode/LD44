@@ -53,9 +53,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefabs:
-  - {fileID: 1368524680543284, guid: a5965b68e07cf5b43a75a28c6f186aac, type: 2}
-  sampleRegionSize: {x: 10000, y: 10000, z: 10000}
-  rejectionSamples: 20
+  - {fileID: 1277555121161618, guid: f75378644ce462e4f8185d0ce5da6b50, type: 2}
+  sampleRegionSize: {x: 20000, y: 20000, z: 15000}
+  rejectionSamples: 8
   speed: 0
 --- !u!114 &114944105016367658
 MonoBehaviour:
@@ -69,5 +69,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefabs:
-  - {fileID: 1368524680543284, guid: a5965b68e07cf5b43a75a28c6f186aac, type: 2}
+  - {fileID: 1277555121161618, guid: f75378644ce462e4f8185d0ce5da6b50, type: 2}
   ship: {fileID: 0}

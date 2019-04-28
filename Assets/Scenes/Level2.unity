@@ -374,37 +374,22 @@ MonoBehaviour:
     type: 2}
   nextLevel: Level3
   chunkSettings:
-  - targetSpeed: 20
-    spacing: 1600
-    scale: 250
+  - targetSpeed: 80
+    spacing: 3000
+    scale: 400
     agitation: 10
-    repeat: 1
-  - targetSpeed: 30
-    spacing: 1600
-    scale: 250
-    agitation: 10
-    repeat: 3
-  - targetSpeed: 40
-    spacing: 1600
-    scale: 250
-    agitation: 10
-    repeat: 3
-  - targetSpeed: 60
-    spacing: 1600
-    scale: 250
-    agitation: 15
     repeat: 10
-  - targetSpeed: 60
-    spacing: 1600
-    scale: 260
-    agitation: 25
-    repeat: 15
-  - targetSpeed: 30
-    spacing: 1600
-    scale: 150
-    agitation: 15
-    repeat: 3
-  - targetSpeed: 1
+  - targetSpeed: 110
+    spacing: 3000
+    scale: 450
+    agitation: 20
+    repeat: 10
+  - targetSpeed: 120
+    spacing: 3000
+    scale: 500
+    agitation: 30
+    repeat: 10
+  - targetSpeed: 10
     spacing: 200000
     scale: 150
     agitation: 15
@@ -425,6 +410,7 @@ MonoBehaviour:
   - content: 'Yuri: I''m glad we survived this one. Gamma Station up ahead.'
     chunk: 34
   speed: 0
+  alive: 1
 --- !u!4 &711972832
 Transform:
   m_ObjectHideFlags: 0
@@ -485,6 +471,16 @@ Prefab:
     - target: {fileID: 4887148312569934, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20215403571168308, guid: b3d7a2d20393e9a439e2eacd2dc97c1b,
+        type: 2}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 114233377046421924, guid: b3d7a2d20393e9a439e2eacd2dc97c1b,
+        type: 2}
+      propertyPath: translationSpeed
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}

@@ -471,7 +471,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &585695442
 GameObject:
@@ -604,6 +604,117 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1348736489161698, guid: b3d7a2d20393e9a439e2eacd2dc97c1b,
     type: 2}
   m_PrefabInternal: {fileID: 618897857}
+--- !u!1 &950958622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 950958625}
+  - component: {fileID: 950958624}
+  - component: {fileID: 950958623}
+  m_Layer: 0
+  m_Name: LevelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &950958623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950958622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71868e526d45c244bbba9d128407758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  box: {fileID: 428940831}
+  text: {fileID: 585695442}
+  lifetime: 5
+--- !u!114 &950958624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950958622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441fd3f72d7dea94d89a6ee1a0dead7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidSpawner: {fileID: 1064570622893080, guid: 446bd56841689de4bb359f8ffc5aa2dd,
+    type: 2}
+  ship: {fileID: 618897858}
+  stationPrefab: {fileID: 1440410268447082, guid: 570a1971785964f43908a9672f1e7ad6,
+    type: 2}
+  nextLevel: Level3
+  chunkSettings:
+  - targetSpeed: 200
+    spacing: 4000
+    scale: 150
+    agitation: 10
+    repeat: 2
+  - targetSpeed: 110
+    spacing: 4000
+    scale: 500
+    agitation: 10
+    repeat: 2
+  - targetSpeed: 130
+    spacing: 3000
+    scale: 500
+    agitation: 10
+    repeat: 10
+  - targetSpeed: 140
+    spacing: 3000
+    scale: 450
+    agitation: 20
+    repeat: 10
+  - targetSpeed: 150
+    spacing: 3000
+    scale: 500
+    agitation: 30
+    repeat: 10
+  - targetSpeed: 300
+    spacing: 3000
+    scale: 100
+    agitation: 10
+    repeat: 10
+  - targetSpeed: 10
+    spacing: 200000
+    scale: 150
+    agitation: 15
+    repeat: 1
+  dialogs:
+  - content: 'AG-0409: Entering Sector Gamma.'
+    chunk: 0
+  - content: 'Captain: We have to hurry. The Armada could jump-in anytime now.'
+    chunk: 0
+  - content: 'Yuri: Re-routing any non-necessary power to the engines. Buckle up!'
+    chunk: 0
+  - content: 'AG-0409: Massive signature detected.'
+    chunk: 34
+  - content: 'Yuri: Engines are suffering but still in full integrity. Delta station
+      is near.'
+    chunk: 34
+  speed: 0
+  alive: 1
+--- !u!4 &950958625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950958622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.9000323, z: 4362.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281535652
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,120 +802,10 @@ RectTransform:
   m_Children:
   - {fileID: 428940832}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &2039202919
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2039202922}
-  - component: {fileID: 2039202921}
-  - component: {fileID: 2039202920}
-  m_Layer: 0
-  m_Name: LevelController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2039202920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2039202919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e71868e526d45c244bbba9d128407758, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  box: {fileID: 428940831}
-  text: {fileID: 585695442}
-  lifetime: 5
---- !u!114 &2039202921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2039202919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 441fd3f72d7dea94d89a6ee1a0dead7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asteroidSpawner: {fileID: 1064570622893080, guid: 446bd56841689de4bb359f8ffc5aa2dd,
-    type: 2}
-  ship: {fileID: 618897858}
-  stationPrefab: {fileID: 1440410268447082, guid: 570a1971785964f43908a9672f1e7ad6,
-    type: 2}
-  nextLevel: Level4
-  chunkSettings:
-  - targetSpeed: 20
-    spacing: 2000
-    scale: 400
-    agitation: 10
-    repeat: 1
-  - targetSpeed: 40
-    spacing: 2000
-    scale: 300
-    agitation: 10
-    repeat: 3
-  - targetSpeed: 75
-    spacing: 1600
-    scale: 250
-    agitation: 10
-    repeat: 3
-  - targetSpeed: 90
-    spacing: 1800
-    scale: 250
-    agitation: 10
-    repeat: 10
-  - targetSpeed: 100
-    spacing: 1800
-    scale: 280
-    agitation: 10
-    repeat: 15
-  - targetSpeed: 30
-    spacing: 1600
-    scale: 150
-    agitation: 0
-    repeat: 3
-  - targetSpeed: 1
-    spacing: 200000
-    scale: 150
-    agitation: 10
-    repeat: 1
-  dialogs:
-  - content: 'AG-0409: Entering Sector Gamma.'
-    chunk: 0
-  - content: 'Captain: We have to hurry. The Armada could jump-in anytime now.'
-    chunk: 2
-  - content: 'Yuri: Re-routing any non-necessary power to the engines. Buckle up!'
-    chunk: 2
-  - content: 'AG-0409: Massive signature detected.'
-    chunk: 34
-  - content: 'Yuri: Engines are suffering but still in full integrity. Delta station
-      is near.'
-    chunk: 34
-  speed: 0
---- !u!4 &2039202922
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2039202919}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.9000323, z: 4362.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

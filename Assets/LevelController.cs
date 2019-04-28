@@ -20,6 +20,9 @@ public class LevelController : MonoBehaviour {
     Queue<Dialog> dialogsQueue;
     Dialog stagedDialog = null;
 
+    Queue<List<Vector3>> levelContent;
+
+
     float startingPosition;
 
     int chunkCrossed = 0;
@@ -59,7 +62,7 @@ public class LevelController : MonoBehaviour {
         float agitation = expandedChunkList[offset].agitation;
 
         currentSpawner = Instantiate(asteroidSpawner, position + new Vector3(ship.transform.position.x, ship.transform.position.y, asteroidSpawner.GetComponent<AsteroidSpawnerV2>().sampleRegionSize.z), Quaternion.identity);
-        currentSpawner.GetComponent<AsteroidSpawnerV2>().SpawnAsteroids(spacing, scale, agitation);
+        StartCoroutine(currentSpawner.GetComponent<AsteroidSpawnerV2>().SpawnAsteroids(levelContent.Dequeue(), scale, agitation));
     }
 
     void SpawnStation(float z)
@@ -76,11 +79,14 @@ public class LevelController : MonoBehaviour {
         dialogsQueue = new Queue<Dialog>(dialogs);
         expandedChunkList = new List<ChunkSettings>();
 
+        levelContent = new Queue<List<Vector3>>();
+
         foreach (ChunkSettings settings in chunkSettings)
         {
             for (int i = 0; i < settings.repeat; i++)
             {
                 expandedChunkList.Add(settings);
+                levelContent.Enqueue(PoissonSphere.GeneratePoints(settings.spacing, asteroidSpawner.GetComponent<AsteroidSpawnerV2>().sampleRegionSize, asteroidSpawner.GetComponent<AsteroidSpawnerV2>().rejectionSamples));
             }
         }
 
@@ -119,9 +125,8 @@ public class LevelController : MonoBehaviour {
         if (!alive)
         {
             GetComponent<DialogManager>().EndAllDialogs();
-            speed = -0.2f;
+            speed = -5f;
         }
-
 
         if (oldSpawner != null)
         {

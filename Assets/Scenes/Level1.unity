@@ -162,37 +162,17 @@ MonoBehaviour:
     type: 2}
   nextLevel: Level2
   chunkSettings:
-  - targetSpeed: 20
-    spacing: 1600
-    scale: 100
+  - targetSpeed: 100
+    spacing: 3000
+    scale: 300
     agitation: 0
-    repeat: 2
-  - targetSpeed: 30
-    spacing: 1550
-    scale: 100
+    repeat: 10
+  - targetSpeed: 110
+    spacing: 2500
+    scale: 300
     agitation: 0
-    repeat: 5
-  - targetSpeed: 40
-    spacing: 1200
-    scale: 100
-    agitation: 0
-    repeat: 5
-  - targetSpeed: 50
-    spacing: 1000
-    scale: 100
-    agitation: 0
-    repeat: 8
-  - targetSpeed: 60
-    spacing: 1000
-    scale: 120
-    agitation: 0
-    repeat: 0
-  - targetSpeed: 30
-    spacing: 1600
-    scale: 150
-    agitation: 0
-    repeat: 3
-  - targetSpeed: 1
+    repeat: 10
+  - targetSpeed: 10
     spacing: 200000
     scale: 100
     agitation: 0
@@ -211,6 +191,7 @@ MonoBehaviour:
   - content: 'Yuri: OK, here''s the Beta Station.'
     chunk: 22
   speed: 0
+  alive: 1
 --- !u!4 &1315018
 Transform:
   m_ObjectHideFlags: 0
@@ -792,14 +773,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 20215403571168308, guid: b3d7a2d20393e9a439e2eacd2dc97c1b,
+    - target: {fileID: 114233377046421924, guid: b3d7a2d20393e9a439e2eacd2dc97c1b,
         type: 2}
-      propertyPath: far clip plane
-      value: 20000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4887148312569934, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      propertyPath: translationSpeed
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d7a2d20393e9a439e2eacd2dc97c1b, type: 2}

@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShipMovement : MonoBehaviour {
-
-    public float speed = 60f;
-
-    public float translationSpeed = 8f;
+    float translationSpeed = 20f;
 
     void Update()
     {

@@ -8,8 +8,8 @@ public class Asteroid : MonoBehaviour {
     {
         Rigidbody rb = GetComponent<Rigidbody>();
 
-        float rotation = strength / 2f;
-        float agitation = strength * 20f;
+        float rotation = strength / 10f;
+        float agitation = strength * 40f;
 
         rb.AddTorque(new Vector3(Random.Range(-rotation, rotation), Random.Range(-rotation, rotation), Random.Range(-rotation, rotation)) * rotation);
         rb.AddForce(new Vector3(Random.Range(-agitation, agitation), Random.Range(-agitation, agitation), Random.Range(-agitation, 0)), ForceMode.Impulse);

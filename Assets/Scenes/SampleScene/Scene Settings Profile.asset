@@ -239,11 +239,11 @@ MonoBehaviour:
     min: 0
   fogStart:
     m_OverrideState: 1
-    m_Value: 8000
+    m_Value: 5000
     min: 0
   fogEnd:
     m_OverrideState: 1
-    m_Value: 10000
+    m_Value: 15000
     min: 0
   fogHeightStart:
     m_OverrideState: 1
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   rotation:
     m_OverrideState: 1
     m_Value: 0
