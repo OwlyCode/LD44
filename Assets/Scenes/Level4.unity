@@ -216,38 +216,33 @@ MonoBehaviour:
   ship: {fileID: 144103700}
   stationPrefab: {fileID: 1440410268447082, guid: 570a1971785964f43908a9672f1e7ad6,
     type: 2}
-  nextLevel: Level2
+  nextLevel: Hyperspace
   chunkSettings:
   - targetSpeed: 20
     spacing: 2000
     scale: 400
     agitation: 10
-    repeat: 1
-  - targetSpeed: 40
-    spacing: 2000
-    scale: 300
-    agitation: 10
     repeat: 3
-  - targetSpeed: 75
-    spacing: 1600
-    scale: 250
-    agitation: 10
-    repeat: 3
-  - targetSpeed: 90
-    spacing: 1800
-    scale: 250
-    agitation: 10
-    repeat: 10
   - targetSpeed: 100
-    spacing: 1800
-    scale: 280
+    spacing: 2000
+    scale: 400
     agitation: 10
-    repeat: 15
-  - targetSpeed: 30
-    spacing: 1600
-    scale: 150
+    repeat: 50
+  - targetSpeed: 80
+    spacing: 3000
+    scale: 300
     agitation: 0
-    repeat: 3
+    repeat: 5
+  - targetSpeed: 60
+    spacing: 3000
+    scale: 300
+    agitation: 0
+    repeat: 5
+  - targetSpeed: 30
+    spacing: 3000
+    scale: 300
+    agitation: 0
+    repeat: 5
   - targetSpeed: 1
     spacing: 200000
     scale: 150
@@ -267,15 +262,15 @@ MonoBehaviour:
       Admiral.'
     chunk: 0
   - content: 'AG-0409: Communications with Solaria''s Comm Relay established. '
-    chunk: 50
+    chunk: 53
   - content: 'Yuri: Sending the baby!'
-    chunk: 50
+    chunk: 53
   - content: 'Yuri: Upload complete!'
-    chunk: 50
+    chunk: 53
   - content: 'Captain: Let''s not get caught. AG, take us to hyperspace!'
-    chunk: 50
+    chunk: 53
   - content: 'AG-0409: Jump drive activated.'
-    chunk: 50
+    chunk: 53
   speed: 0
 --- !u!4 &511810636
 Transform:

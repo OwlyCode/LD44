@@ -745,7 +745,7 @@ MonoBehaviour:
   ship: {fileID: 618897858}
   stationPrefab: {fileID: 1440410268447082, guid: 570a1971785964f43908a9672f1e7ad6,
     type: 2}
-  nextLevel: Level2
+  nextLevel: Level4
   chunkSettings:
   - targetSpeed: 20
     spacing: 2000
