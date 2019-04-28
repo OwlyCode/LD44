@@ -7,6 +7,7 @@ public class LevelController : MonoBehaviour {
     public GameObject asteroidSpawner;
     public GameObject ship;
     public GameObject stationPrefab;
+    public string nextLevel;
 
     GameObject oldSpawner;
     GameObject currentSpawner;
@@ -65,6 +66,7 @@ public class LevelController : MonoBehaviour {
         GameObject station = Instantiate(stationPrefab, position, Quaternion.identity);
 
         station.transform.parent = currentSpawner.transform;
+        station.GetComponent<Station>().nextLevel = nextLevel;
     }
 
     void Start ()

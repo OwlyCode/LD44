@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Station : MonoBehaviour {
 
     float rotationSpeed = 0.05f;
+    public string nextLevel;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +23,7 @@ public class Station : MonoBehaviour {
         if (other.gameObject.GetComponent<Ship>() != null)
         {
             Debug.Log("Level ended");
+            SceneManager.LoadScene(nextLevel);
         }
     }
 }
