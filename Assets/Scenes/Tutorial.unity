@@ -350,9 +350,9 @@ MonoBehaviour:
   - content: 'Captain: If we succeed, we will be saviors.'
     chunk: 5
   - content: 'AG-0409: Detecting massive signature.'
-    chunk: 22
+    chunk: 16
   - content: 'Yuri: We''re close to the first station.'
-    chunk: 22
+    chunk: 16
   speed: 0
 --- !u!4 &557889399
 Transform:
