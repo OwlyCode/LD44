@@ -14,15 +14,15 @@ public class Ending : MonoBehaviour {
         story += "An historic battle took place, where the smaller but more maneuverable rebel ships took advantage of the asteroid field to beat the Armada. ";
         story += "With its army defeated, the Emperor vanished. The war was over.\n\n";
 
-        story += "Yuri bought a farm on a quiet core world, where he spent the rest of his life.\n\n";
+        story += "Yuri bought a tavern on a quiet core world, where he spent the rest of his life preparing cocktails and cooking food.\n\n";
 
         int sold = 0;
 
         if (GlobalState.hasMk1Upgrade) {
-            story += "The Captain was not interested in fighting anymore. He was offered to be Admiral of the Federal Fleet but refused. "; // First battle
+            story += "The Captain was not interested in fighting anymore. He was offered to be Admiral of the newly created Federal Fleet but refused. Leaving the young Federation in turmoil. "; // First battle
             sold++;
         } else {
-            story += "The Captain became Admiral of the Federal Fleet. ";
+            story += "The Captain became Admiral of the newly created Federal Fleet. Under his command, strategic battles were won and the young Federation established a bright future. ";
         }
 
         if (GlobalState.hasMk2Upgrade) {
@@ -30,23 +30,23 @@ public class Ending : MonoBehaviour {
             sold++;
         }
         else {
-            story += "He married his fiance and had two girls, Lena and Sonia. ";
+            story += "He married his fiance and had two girls, Lena and Sonia. He was as good as a father as he was as a pilot. ";
         }
 
         if (GlobalState.hasEmergencyShieldUpgrade) {
-            story += "His friends never got any news from him and lost contact. "; // Childhood
+            story += "As time passed, his friendship with Yuri slowly vanished. The Captain became lonelier and lonelier. "; // Childhood
             sold++;
         }
         else {
-            story += "He spent a lot of time at the bar with his friends and was famous for his generosity. ";
+            story += "He regularly met with Yuri and his old friends. The Captain would be remembered long after his death.";
         }
 
         if (GlobalState.hasDeflector) {
-            story += "At the funeral of his mother, he could't shed a tear and felt outcasted of his family. "; // Mother
+            story += "At the funeral of his mother, he could't shed a tear and felt outcasted of his family. He never saw his brothers after that. "; // Mother
             sold++;
         }
         else {
-            story += "When his mother passed, he went to visit his family to remember the good old time. ";
+            story += "With the money he had won, he bought the dream house for his beloved mother and he took care of her in her old days.";
         }
 
         if (sold == 0)
