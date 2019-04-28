@@ -79,6 +79,13 @@ public class LevelController : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
+        float chunkSize = asteroidSpawner.GetComponent<AsteroidSpawnerV2>().sampleRegionSize.z;
+        float chunkZ = currentSpawner.transform.position.z - chunkSize / 2;
+        float chunkProgression = 1f - (chunkZ - ship.transform.position.z) / chunkSize;
+
+
+        Debug.Log(chunkProgression);
+
         if (dialogsQueue.Count > 0 && stagedDialog == null)
         {
             stagedDialog = dialogsQueue.Dequeue();
@@ -92,7 +99,14 @@ public class LevelController : MonoBehaviour {
 
         if (expandedChunkList.Count > chunkCrossed)
         {
-            speed = expandedChunkList[chunkCrossed].targetSpeed;
+            float oldSpeed = 0f;
+
+            if (chunkCrossed > 0) {
+                oldSpeed = expandedChunkList[chunkCrossed - 1].targetSpeed;
+            }
+
+            speed = Mathf.Lerp(oldSpeed, expandedChunkList[chunkCrossed].targetSpeed, chunkProgression);
+            //speed = expandedChunkList[chunkCrossed].targetSpeed;
         }
 
 
