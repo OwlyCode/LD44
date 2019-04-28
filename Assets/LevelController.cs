@@ -73,6 +73,14 @@ public class LevelController : MonoBehaviour {
 
         station.transform.parent = currentSpawner.transform;
         station.GetComponent<Station>().nextLevel = nextLevel;
+
+        if(nextLevel == "Victory")
+        { // sorry mum
+            foreach (MeshRenderer m in station.GetComponentsInChildren<MeshRenderer>())
+            {
+                m.enabled = false;
+            }
+        }
     }
 
     void Start ()

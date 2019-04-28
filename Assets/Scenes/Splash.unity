@@ -5232,7 +5232,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 523252401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 0, y: 0, z: -17.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10171,7 +10171,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 988306241}
-  - component: {fileID: 988306240}
   m_Layer: 0
   m_Name: ship
   m_TagString: Untagged
@@ -10179,18 +10178,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &988306240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114891556679159492, guid: dcb512d5a26c5844db42b6434735e73d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 988306239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cd1f34aea19fea43b3bf6384777db1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &988306241
 Transform:
   m_ObjectHideFlags: 0
@@ -10199,7 +10186,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988306239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 177738627}

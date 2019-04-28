@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Splash.unity
+    guid: c63bed3ce67a5604aa4dfd9d03047a70
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: b84654491f793684ca664b8409ef962d
   - enabled: 1
@@ -32,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Merchant4.unity
     guid: ca7cc8d33890ec14ab582668d0e0c540
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 829ade36ba0357e4b91985304bca7dea
   m_configObjects: {}

@@ -38,7 +38,9 @@ public class Merchant : MonoBehaviour {
         GlobalState.hasMk1Upgrade = true;
 
         queue.Enqueue("Stokes: Wonderful! Let me plug this here, and that here.");
-        queue.Enqueue("Captain: I remember...");
+        queue.Enqueue("Captain: I remember... It was... exciting. That feel, to be alive. After the battle we were just happy to breathe.");
+        queue.Enqueue("Stokes: Process complete!");
+
         ShowMessage();
         RefreshButtons();
     }
@@ -48,7 +50,9 @@ public class Merchant : MonoBehaviour {
         GlobalState.hasMk2Upgrade = true;
 
         queue.Enqueue("Stokes: Wonderful! Let me plug this here, and that here.");
-        queue.Enqueue("Captain: I remember...");
+        queue.Enqueue("Captain: I remember... Her... Her perfume, her voice. How would I forget that? We met at the military school, she became flight instructor. I would have sold the world for her.");
+        queue.Enqueue("Stokes: Process complete!");
+
         ShowMessage();
         RefreshButtons();
     }
@@ -58,7 +62,9 @@ public class Merchant : MonoBehaviour {
         GlobalState.hasEmergencyShieldUpgrade = true;
 
         queue.Enqueue("Stokes: Wonderful! Let me plug this here, and that here.");
-        queue.Enqueue("Captain: I remember...");
+        queue.Enqueue("Captain: I remember... We were happy. The sun of the Earth summer, the smell of the wheat before the harvest. We used to build wooden huts and swords in the garden.");
+        queue.Enqueue("Stokes: Process complete!");
+
         ShowMessage();
         RefreshButtons();
     }
@@ -68,7 +74,9 @@ public class Merchant : MonoBehaviour {
         GlobalState.hasDeflector = true;
 
         queue.Enqueue("Stokes: Wonderful! Let me plug this here, and that here.");
-        queue.Enqueue("Captain: I remember...");
+        queue.Enqueue("Captain: I remember... Mother. She gave life to me, taught me to walk, speak and behave. When I left for the navy she cried for weeks. I'm scared I'll never see her again.");
+        queue.Enqueue("Stokes: Process complete!");
+
         ShowMessage();
         RefreshButtons();
     }
