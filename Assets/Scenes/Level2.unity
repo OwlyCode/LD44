@@ -379,22 +379,22 @@ MonoBehaviour:
     spacing: 4000
     scale: 50
     agitation: 10
-    repeat: 4
+    repeat: 8
   - targetSpeed: 80
     spacing: 3000
     scale: 400
     agitation: 10
-    repeat: 10
+    repeat: 8
   - targetSpeed: 110
     spacing: 3000
     scale: 450
     agitation: 20
-    repeat: 10
+    repeat: 8
   - targetSpeed: 120
     spacing: 3000
     scale: 500
     agitation: 30
-    repeat: 10
+    repeat: 8
   - targetSpeed: 160
     spacing: 4500
     scale: 30
@@ -414,9 +414,9 @@ MonoBehaviour:
       up!"
     chunk: 0
   - content: 'AG-0409: Massive signature detected.'
-    chunk: 34
+    chunk: 32
   - content: 'Yuri: I''m glad we survived this one. Gamma Station up ahead.'
-    chunk: 34
+    chunk: 32
   speed: 0
   alive: 1
 --- !u!4 &711972832

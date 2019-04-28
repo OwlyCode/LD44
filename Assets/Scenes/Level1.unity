@@ -164,6 +164,11 @@ MonoBehaviour:
   respawnLevel: Merchant1
   chunkSettings:
   - targetSpeed: 100
+    spacing: 4000
+    scale: 50
+    agitation: 10
+    repeat: 7
+  - targetSpeed: 100
     spacing: 3000
     scale: 300
     agitation: 0
@@ -193,9 +198,9 @@ MonoBehaviour:
   - content: 'Yuri: Beware Cap'', here the field gets more dense.'
     chunk: 5
   - content: 'AG-0409: Massive signature detected.'
-    chunk: 19
+    chunk: 27
   - content: 'Yuri: OK, here''s the Beta Station.'
-    chunk: 22
+    chunk: 27
   speed: 19
   alive: 1
 --- !u!4 &1315018

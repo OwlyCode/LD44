@@ -8,7 +8,17 @@ public class AsteroidSpawnerV2 : MonoBehaviour {
     public Vector3 sampleRegionSize = Vector3.one;
     public int rejectionSamples = 30;
 
+    public bool autoSpawn = false;
+
     public float speed = 0f;
+
+    void Start()
+    {
+        if (autoSpawn)
+        {
+            StartCoroutine(SpawnAsteroids(2000f, 250f, 0f));
+        }
+    }
 
     public IEnumerator SpawnAsteroids(float spacing, float scale, float agitation)
     {

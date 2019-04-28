@@ -51,7 +51,7 @@ public class LevelController : MonoBehaviour {
 
         oldSpawner = currentSpawner;
 
-        Vector3 position = Vector3.zero;
+        Vector3 position = new Vector3(0, 0, 5000f);
 
         if (oldSpawner != null)
         {
