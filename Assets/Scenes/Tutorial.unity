@@ -287,7 +287,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 557889397}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 441fd3f72d7dea94d89a6ee1a0dead7c, type: 3}
   m_Name: 
@@ -295,10 +295,64 @@ MonoBehaviour:
   asteroidSpawner: {fileID: 1064570622893080, guid: 446bd56841689de4bb359f8ffc5aa2dd,
     type: 2}
   ship: {fileID: 1250301420}
-  spacing: 1000
-  scale: 100
-  agitation: 80
-  chunkCrossed: 0
+  chunkSettings:
+  - targetSpeed: 10
+    spacing: 1600
+    scale: 100
+    agitation: 0
+    repeat: 3
+  - targetSpeed: 20
+    spacing: 1550
+    scale: 100
+    agitation: 0
+    repeat: 4
+  - targetSpeed: 30
+    spacing: 1500
+    scale: 100
+    agitation: 0
+    repeat: 5
+  - targetSpeed: 40
+    spacing: 1400
+    scale: 100
+    agitation: 0
+    repeat: 5
+  - targetSpeed: 50
+    spacing: 1300
+    scale: 100
+    agitation: 0
+    repeat: 5
+  - targetSpeed: 30
+    spacing: 2000
+    scale: 100
+    agitation: 0
+    repeat: 3
+  - targetSpeed: 0
+    spacing: 200000
+    scale: 100
+    agitation: 0
+    repeat: 1
+  dialogs:
+  - content: 'AG-0409: Hyperjump complete. Approaching the asteroid field.'
+    chunk: 0
+  - content: 'Yuri: Alright, let''s manuever to the next station. You''re in manual
+      mode Cap''!'
+    chunk: 0
+  - content: 'Tutorial: Use WASD or arrow keys to move the ship.'
+    chunk: 0
+  - content: 'Yuri: Are you sure about what we''re doing?'
+    chunk: 5
+  - content: 'Captain: The second we stole this ship we became deserters. It is too
+      late to reconsider our plans.'
+    chunk: 5
+  - content: 'Yuri: So this it? We''re outlaws now?'
+    chunk: 5
+  - content: 'Captain: If we succeed, we will be saviors.'
+    chunk: 5
+  - content: 'AG-0409: Detecting massive signature.'
+    chunk: 22
+  - content: 'Yuri: We''re close to the first station.'
+    chunk: 22
+  speed: 0
 --- !u!4 &557889399
 Transform:
   m_ObjectHideFlags: 0
@@ -325,25 +379,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogs:
   - content: 'AG-0409: Hyperjump complete. Approaching the asteroid field.'
-    distance: 0
+    chunk: 0
   - content: 'Yuri: Alright, let''s manuever to the next station. You''re in manual
       mode Cap''!'
-    distance: 0
+    chunk: 0
   - content: 'Tutorial: Use WASD or arrow keys to move the ship.'
-    distance: 0
+    chunk: 0
   - content: 'Yuri: Are you sure about what we''re doing?'
-    distance: 20000
+    chunk: 0
   - content: 'Captain: The second we stole this ship we became deserters. It is too
       late to reconsider our plans.'
-    distance: 20000
+    chunk: 0
   - content: 'Yuri: So this it? We''re outlaws now?'
-    distance: 20000
+    chunk: 0
   - content: 'Captain: If we succeed, we will be saviors.'
-    distance: 20000
+    chunk: 0
   - content: 'AG-0409: Detecting massive signature.'
-    distance: 140000
+    chunk: 0
   - content: 'Yuri: We''re close to the first station.'
-    distance: 140000
+    chunk: 0
 --- !u!114 &557889401
 MonoBehaviour:
   m_ObjectHideFlags: 0

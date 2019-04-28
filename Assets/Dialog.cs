@@ -7,5 +7,5 @@ public class Dialog {
 
     [TextArea(3, 10)]
     public string content;
-    public float distance;
+    public int chunk;
 }

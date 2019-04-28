@@ -10,8 +10,6 @@ public class ShipMovement : MonoBehaviour {
 
     void Update()
     {
-        transform.position = transform.position + Vector3.forward * speed;
-
         if (Input.GetKey("up"))
         {
             transform.position = transform.position + Vector3.up * translationSpeed;

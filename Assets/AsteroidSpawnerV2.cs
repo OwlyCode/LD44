@@ -10,6 +10,8 @@ public class AsteroidSpawnerV2 : MonoBehaviour {
 
     List<Vector3> points;
 
+    public float speed = 0f;
+
     public void SpawnAsteroids(float spacing, float scale, float agitation)
     {
         points = PoissonSphere.GeneratePoints(spacing, sampleRegionSize, rejectionSamples);
@@ -26,8 +28,8 @@ public class AsteroidSpawnerV2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        transform.position = transform.position + Vector3.back * speed;
+    }
 
     private void OnDrawGizmos()
     {

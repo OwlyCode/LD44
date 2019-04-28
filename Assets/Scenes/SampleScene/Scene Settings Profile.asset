@@ -239,7 +239,7 @@ MonoBehaviour:
     min: 0
   fogStart:
     m_OverrideState: 1
-    m_Value: 1000
+    m_Value: 8000
     min: 0
   fogEnd:
     m_OverrideState: 1
@@ -247,10 +247,10 @@ MonoBehaviour:
     min: 0
   fogHeightStart:
     m_OverrideState: 1
-    m_Value: 10000
+    m_Value: 1e+10
   fogHeightEnd:
     m_OverrideState: 1
-    m_Value: 10000
+    m_Value: 1e+11
 --- !u!114 &114905924698368730
 MonoBehaviour:
   m_ObjectHideFlags: 0

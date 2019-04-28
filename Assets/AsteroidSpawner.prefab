@@ -54,8 +54,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPrefabs:
   - {fileID: 1368524680543284, guid: a5965b68e07cf5b43a75a28c6f186aac, type: 2}
-  sampleRegionSize: {x: 7500, y: 7500, z: 20000}
+  sampleRegionSize: {x: 10000, y: 10000, z: 10000}
   rejectionSamples: 5
+  speed: 0
 --- !u!114 &114944105016367658
 MonoBehaviour:
   m_ObjectHideFlags: 1
