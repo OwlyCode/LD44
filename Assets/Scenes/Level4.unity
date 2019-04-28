@@ -217,6 +217,7 @@ MonoBehaviour:
   stationPrefab: {fileID: 1440410268447082, guid: 570a1971785964f43908a9672f1e7ad6,
     type: 2}
   nextLevel: Hyperspace
+  respawnLevel: Merchant4
   chunkSettings:
   - targetSpeed: 40
     spacing: 4000

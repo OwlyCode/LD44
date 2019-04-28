@@ -296,7 +296,8 @@ MonoBehaviour:
   ship: {fileID: 1250301420}
   stationPrefab: {fileID: 1440410268447082, guid: 570a1971785964f43908a9672f1e7ad6,
     type: 2}
-  nextLevel: Level1
+  nextLevel: Merchant1
+  respawnLevel: Tutorial
   chunkSettings:
   - targetSpeed: 100
     spacing: 3200

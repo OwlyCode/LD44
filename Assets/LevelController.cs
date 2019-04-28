@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour {
     public GameObject ship;
     public GameObject stationPrefab;
     public string nextLevel;
+    public string respawnLevel;
 
     GameObject oldSpawner;
     GameObject currentSpawner;
