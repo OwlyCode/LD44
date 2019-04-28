@@ -12,6 +12,15 @@ public class Merchant : MonoBehaviour {
     public GameObject text;
     string currentMessage = null;
 
+    public GameObject nextButton;
+    public GameObject leaveButton;
+    public GameObject engineUpgradeMk1;
+    public GameObject engineUpgradeMk2;
+    public GameObject emergencyShild;
+    public GameObject deflector;
+
+    public int level = 1;
+
     // Use this for initialization
     void Start () {
         queue = new Queue<string>(messages);
@@ -28,7 +37,17 @@ public class Merchant : MonoBehaviour {
         if (queue.Count > 0)
         {
             currentMessage = queue.Dequeue();
+            StopAllCoroutines();
             StartCoroutine(TypeSentence());
+            leaveButton.GetComponent<Button>().interactable = false;
+        } else {
+            nextButton.GetComponent<Button>().interactable = false;
+            leaveButton.GetComponent<Button>().interactable = true;
+
+            engineUpgradeMk1.SetActive(!GlobalState.hasMk1Upgrade && level > 0);
+            engineUpgradeMk2.SetActive(!GlobalState.hasMk2Upgrade && level > 1);
+            emergencyShild.SetActive(!GlobalState.hasEmergencyShieldUpgrade && level > 2);
+            deflector.SetActive(!GlobalState.hasDeflector && level > 3);
         }
     }
 
