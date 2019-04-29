@@ -321,7 +321,7 @@ MonoBehaviour:
   - content: 'Yuri: Alright, let''s manuever to the next station. You''re in manual
       mode Cap''!'
     chunk: 0
-  - content: 'Tutorial: Use WASD or arrow keys to move the ship.'
+  - content: 'Tutorial: Use WASD, arrow keys or a controller to move the ship.'
     chunk: 0
   - content: 'Yuri: Are you sure about what we''re doing?'
     chunk: 10
