@@ -20,7 +20,10 @@ public class ShipMovement : MonoBehaviour {
 
     void Update()
     {
-
+        if(!GameObject.Find("LevelController").GetComponent<LevelController>().alive)
+        {
+            return;
+        }
         transform.position = transform.position + Vector3.up * Input.GetAxis("Vertical") * translationSpeed * Time.deltaTime;
         transform.position = transform.position + Vector3.right * Input.GetAxis("Horizontal") * translationSpeed* Time.deltaTime;
     }
