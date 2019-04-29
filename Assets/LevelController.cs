@@ -146,7 +146,7 @@ public class LevelController : MonoBehaviour {
                 oldSpeed = expandedChunkList[chunkCrossed - 1].targetSpeed;
             }
 
-            speed = Mathf.Lerp(oldSpeed, expandedChunkList[chunkCrossed].targetSpeed, chunkProgression);
+            speed = Mathf.Lerp(oldSpeed, expandedChunkList[chunkCrossed].targetSpeed, chunkProgression) * 60f;
         }
 
         if (!alive)

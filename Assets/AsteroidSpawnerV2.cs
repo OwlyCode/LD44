@@ -48,7 +48,7 @@ public class AsteroidSpawnerV2 : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        transform.position = transform.position + Vector3.back * speed;
+        transform.position = transform.position + Vector3.back * speed * Time.deltaTime;
     }
 
     private void OnDrawGizmos()
