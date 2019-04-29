@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Station : MonoBehaviour {
 
     float rotationSpeed = 0.05f;
-    public string nextLevel;
 
 	// Use this for initialization
 	void Start () {
@@ -17,13 +16,4 @@ public class Station : MonoBehaviour {
     void Update () {
         transform.Rotate(new Vector3(0f, rotationSpeed, 0f));
 	}
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<Ship>() != null)
-        {
-            Debug.Log("Level ended");
-            SceneManager.LoadScene(nextLevel);
-        }
-    }
 }

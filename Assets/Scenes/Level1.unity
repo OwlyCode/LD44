@@ -159,7 +159,7 @@ MonoBehaviour:
   asteroidSpawner: {fileID: 1064570622893080, guid: 446bd56841689de4bb359f8ffc5aa2dd,
     type: 2}
   ship: {fileID: 1490367652}
-  stationPrefab: {fileID: 1440410268447082, guid: 570a1971785964f43908a9672f1e7ad6,
+  stationPrefab: {fileID: 1058284718405454, guid: 46fb4548e8c19c945bf9aae4e02f5167,
     type: 2}
   nextLevel: Merchant2
   respawnLevel: Merchant1

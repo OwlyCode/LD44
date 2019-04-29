@@ -80,7 +80,7 @@ public class LevelController : MonoBehaviour {
         GameObject station = Instantiate(stationPrefab, position, Quaternion.identity);
 
         station.transform.parent = currentSpawner.transform;
-        station.GetComponent<Station>().nextLevel = nextLevel;
+        station.GetComponent<StationContainer>().nextLevel = nextLevel;
 
         if(nextLevel == "Victory")
         { // sorry mum
