@@ -153,7 +153,10 @@ public class LevelController : MonoBehaviour {
         {
             GetComponent<DialogManager>().EndAllDialogs();
             speed = 0f;
-            GlobalState.respawning = true;
+            if (respawnLevel != "Tutorial")
+            {
+                GlobalState.respawning = true;
+            }
             StartCoroutine(Respawn());
         }
 
