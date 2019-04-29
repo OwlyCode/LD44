@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShipMovement : MonoBehaviour {
-    float translationSpeed = 20f;
+    float translationSpeed = 25f;
 
     void Start()
     {
         if (GlobalState.hasMk1Upgrade)
         {
-            translationSpeed = 25f;
+            translationSpeed = 35f;
         }
 
         if (GlobalState.hasMk2Upgrade)
         {
-            translationSpeed = 40f;
+            translationSpeed = 45f;
         }
     }
 

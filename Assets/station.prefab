@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 4204463409574686}
   - component: {fileID: 114422887644212006}
   - component: {fileID: 135229216610474188}
+  - component: {fileID: 65196201646513240}
   m_Layer: 0
   m_Name: station
   m_TagString: Untagged
@@ -129,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1440410268447082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24374.61, y: 10437.636, z: 3920.9683}
+  m_LocalPosition: {x: 39607.09, y: 52061.457, z: -6739.0845}
   m_LocalScale: {x: 256, y: 256, z: 256}
   m_Children:
   - {fileID: 4565177423554734}
@@ -1435,6 +1436,18 @@ Mesh:
   m_MeshMetrics[0]: 1
   m_MeshMetrics[1]: 1
   m_MeshOptimized: 0
+--- !u!65 &65196201646513240
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440410268447082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1000, y: 1000, z: 50}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114422887644212006
 MonoBehaviour:
   m_ObjectHideFlags: 1
