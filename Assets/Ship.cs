@@ -25,12 +25,18 @@ public class Ship : MonoBehaviour {
     }
 
     void Update () {
-
         float verticalAngle = transform.eulerAngles.x;
         float horizontalAngle = transform.eulerAngles.y;
         bool rollbackVertical = true;
         bool rollbackHorizontal= true;
 
+
+        verticalAngle = Input.GetAxis("Vertical") * -10f;
+        horizontalAngle = Input.GetAxis("Horizontal") * 10f;
+
+        transform.eulerAngles = new Vector3(verticalAngle, horizontalAngle, 0);
+
+        return;
 
         if (Input.GetKey("up"))
         {
