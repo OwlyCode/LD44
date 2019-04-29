@@ -112,13 +112,14 @@ public class Merchant : MonoBehaviour {
             StartCoroutine(TypeSentence());
             leaveButton.GetComponent<Button>().interactable = false;
             nextButton.GetComponent<Button>().interactable = true;
+            nextButton.GetComponent<Button>().Select();
         }
-       
+
         if (queue.Count == 0)
         {
-            nextButton.GetComponent<Button>().interactable = false;
             leaveButton.GetComponent<Button>().interactable = true;
-
+            leaveButton.GetComponent<Button>().Select();
+            nextButton.GetComponent<Button>().interactable = false;
             RefreshButtons();
         }
     }
